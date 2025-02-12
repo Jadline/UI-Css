@@ -1,0 +1,56 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 20rem 1fr 1fr;
+    grid-template-rows: 20vh 10rem .5fr .5fr;
+    grid-template-areas: 
+        "header  header header"
+        "sidebar card  card"
+        "sidebar chart1 chart2"
+        "nothing chart3 chart4";
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Now this will work */
+.header {
+    grid-area: header;
+    background-color: navy;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 20px;
+}
+.sidebar{
+    grid-area : sidebar;
+    background-color: red;
+    color: white;
+    
+}
+.card {
+    grid-area : card;
+    background-color:purple;
+}
+.chart1 {
+    grid-area :chart1;
+    background-color : pink;
+}
+.chart2{
+    grid-area : chart2;
+    background-color : maroon;
+}
+.chart3 {
+    grid-area : chart3;
+    background-color : yellow;
+}
+.chart4 {
+    grid-area : chart4;
+    background-color : orange;
+}
+.chart1, .chart2, .chart3, .chart4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}

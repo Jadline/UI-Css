@@ -1,0 +1,17 @@
+.card-item{
+    font-size : 1.4rem;
+    border : .2rem solid #000;
+    border-radius : .4rem;
+    padding : 1.2rem 1.8rem;
+}
+.card-container {
+    /* display : flex;
+    justify-content : space-between; */
+    display : grid;
+    gap : 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    background-color : red;
+    width : 100%;
+    max-width : 100%;
+    padding :.5rem;
+}
