@@ -1,0 +1,53 @@
+.ATD-container {
+    display : grid;
+    grid-template-columns : 20rem 2fr 1fr 1fr;
+    grid-template-rows : 20vh 10rem .5fr .5fr;
+    grid-template-areas :
+    "ATD-header ATD-header ATD-header ATD-header"
+    "ATD-sidebar ATD-card ATD-card ATD-card"
+    "ATD-sidebar ATD-chart1 ATD-chart2 ATD-chart21"
+    "nothing ATD-chart3 ATD-chart4 ATD-chart4"
+    ;
+    gap :1rem;
+    padding : 1rem;
+}
+.ATD-header {
+    grid-area : ATD-header;
+    background-color : navy;
+}
+.ATD-sidebar {
+    grid-area : ATD-sidebar ;
+    background-color : magenta;
+}
+.ATD-card {
+    grid-area : ATD-card;
+    background-color :purple;
+}
+.ATD-chart1 {
+    grid-area : ATD-chart1;
+    background-color : indigo;
+}
+.ATD-chart2{
+    grid-area : ATD-chart2;
+    background-color :lightseagreen;
+}
+.ATD-chart21{
+    grid-area: ATD-chart21;
+    background-color: lightseagreen;
+}
+.ATD-chart3 {
+    grid-area : ATD-chart3;
+    background-color :bisque;
+    /* grid-column: span 2; */
+}
+.ATD-chart4{
+    grid-area : ATD-chart4;
+    background-color :olive;
+}
+.ATD-chart1,.ATD-chart2,.ATD-chart3,.ATD-chart4,.ATD-chart21{
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    width : 100%;
+    height : 100%;
+}

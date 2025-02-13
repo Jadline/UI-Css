@@ -1,0 +1,47 @@
+.ST-container {
+    display: grid;
+    grid-template-columns: 20rem 1fr .7fr;
+    grid-template-rows: 20vh 10rem .5fr .5fr;
+    grid-template-areas: 
+        "ST-header  ST-header ST-header"
+        "ST-sidebar ST-card  ST-card"
+        "ST-sidebar ST-chart1 ST-chart2"
+        "nothing ST-chart3 ST-chart4";
+    gap: 1rem;
+    padding: 1rem;
+}
+.ST-header{
+    grid-area : ST-header;
+    background-color : navy;
+}
+.ST-sidebar {
+    grid-area : ST-sidebar;
+    background-color :red;
+}
+.ST-chart1 {
+    grid-area : ST-chart1;
+    background-color : indianred;
+}
+.ST-chart2 {
+    grid-area : ST-chart2;
+    background-color : peru;
+}
+.ST-chart3 {
+    grid-area : ST-chart3;
+    background-color :aqua;
+}
+.ST-chart4 {
+    grid-area : ST-chart4;
+    background-color :rgb(217, 250, 135);
+}
+.ST-card{
+    grid-area : ST-card;
+    background-color : purple;
+}
+.ST-chart1, .ST-chart2, .ST-chart3, .ST-chart4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}

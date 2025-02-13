@@ -1,0 +1,41 @@
+.NOS-container {
+    display : grid;
+    grid-template-columns : 20rem .5fr .5fr;
+    grid-template-rows : 20vh 10rem .5fr .5fr;
+    grid-template-areas : 
+       "NOS-header NOS-header NOS-header"
+       "NOS-sidebar NOS-card  NOS-card"
+       "NOS-sidebar NOS-chart1 NOS-chart1"
+       "nothing NOS-chart2 NOS-chart2";
+    gap : 1rem;
+    padding : 1rem;
+}
+.NOS-header {
+    grid-area: NOS-header;
+    background-color:navy;
+}
+.NOS-sidebar {
+    grid-area : NOS-sidebar;
+    background-color : red;
+    
+}
+.NOS-card{
+    grid-area : NOS-card;
+    background-color :purple;
+}
+.NOS-chart1 {
+    grid-area : NOS-chart1;
+    background-color : aqua;
+
+}
+.NOS-chart2 {
+    grid-area : NOS-chart2 ;
+    background-color: bisque;
+}
+.NOS-chart1,.NOS-chart2{
+    display : flex;
+    align-items : center;
+    justify-content: center;
+    width : 100%;
+    height : 100%;
+}

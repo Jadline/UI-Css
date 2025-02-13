@@ -1,9 +1,9 @@
 import { Routes,Route } from "react-router-dom"
-import AverageDeliveryTime from "./Pages/Average-delivery-time"
-import NumberOfShipments from "./Pages/Number-of-shipments"
-import PerfectOrderRate from "./Pages/Perfect-order-rate"
-import ShippingTime from "./Pages/Shipping-time"
-import TransportationCost from "./Pages/Transportation-cost"
+import AverageDeliveryTime from "./Pages/Average-delivery-Time/Average-delivery-time"
+import NumberOfShipments from "./Pages/Number-of-Shipments/Number-of-shipments"
+import PerfectOrderRate from "./Pages/Perfect-Order-Rate/Perfect-order-rate"
+import ShippingTime from "./Pages/Shipping-Time/Shipping-time"
+import TransportationCost from "./Pages/Transportation-Cost/Transportation-cost"
 import PageNotFound from "./Pages/PageNotFound"
 
 function App() {

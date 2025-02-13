@@ -4,4 +4,6 @@ header {
     /* background-color : red; */
     padding-inline : 2rem;
     align-items : center;
+    color :#fff;
+    font-size : 1.6rem;
 }

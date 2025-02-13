@@ -1,0 +1,48 @@
+.TC-container {
+    display: grid;
+    grid-template-columns: 20rem 1.2fr 1fr 1.2fr;
+    grid-template-rows: 20vh 10rem .5fr .5fr;
+    grid-template-areas: 
+        "TC-header  TC-header TC-header TC-header"
+        "TC-sidebar TC-card  TC-card TC-card"
+        "TC-sidebar TC-chart1 TC-chart2 TC-chart2"
+        "nothing TC-chart3 TC-chart3 TC-chart4";
+    gap: 1rem;
+    padding: 1rem;
+}
+.TC-header {
+    grid-area : TC-header;
+    background-color : navy;
+}
+.TC-sidebar {
+    grid-area : TC-sidebar ;
+    background-color : magenta;
+}
+.TC-card {
+    grid-area : TC-card;
+    background-color :purple;
+}
+.TC-chart1 {
+    grid-area : TC-chart1;
+    background-color : indigo;
+}
+.TC-chart2{
+    grid-area : TC-chart2;
+    background-color :lightseagreen;
+}
+.TC-chart3 {
+    grid-area : TC-chart3;
+    background-color :bisque;
+    /* grid-column: span 2; */
+}
+.TC-chart4{
+    grid-area : TC-chart4;
+    background-color :olive;
+}
+.TC-chart1,.TC-chart2,.TC-chart3,.TC-chart4{
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    width : 100%;
+    height : 100%;
+}
