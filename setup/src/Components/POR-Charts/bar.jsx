@@ -8,22 +8,22 @@ function NamesBar({ data, className }) {
     const containerRef = useRef(null);
     const [dimensions, setDimensions] = useState({ width: 700, height: 400 });
 
-    useEffect(() => {
-        const resizeObserver = new ResizeObserver((entries) => {
-            if (!entries || entries.length === 0) return;
-            const { width } = entries[0].contentRect;
+    // useEffect(() => {
+    //     const resizeObserver = new ResizeObserver((entries) => {
+    //         if (!entries || entries.length === 0) return;
+    //         const { width } = entries[0].contentRect;
             
-            // Maintain a good aspect ratio instead of a fixed height
-            const height = width * 0.6; 
-            setDimensions({ width, height });
-        });
+    //         // Maintain a good aspect ratio instead of a fixed height
+    //         const height = width * 0.6; 
+    //         setDimensions({ width, height });
+    //     });
 
-        if (containerRef.current) {
-            resizeObserver.observe(containerRef.current);
-        }
+    //     if (containerRef.current) {
+    //         resizeObserver.observe(containerRef.current);
+    //     }
 
-        return () => resizeObserver.disconnect();
-    }, []);
+    //     return () => resizeObserver.disconnect();
+    // }, []);
 
     const { width, height } = dimensions;
     const boundsWidth = width - MARGIN.left - MARGIN.right;

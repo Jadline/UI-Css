@@ -25,7 +25,7 @@
 }
 .ATD-chart1 {
     grid-area : ATD-chart1;
-    background-color : indigo;
+    background-color : rgb(50, 181, 207);
 }
 .ATD-chart2{
     grid-area : ATD-chart2;
