@@ -7,8 +7,9 @@
         "ST-sidebar ST-card  ST-card"
         "ST-sidebar ST-chart1 ST-chart2"
         "nothing ST-chart3 ST-chart4";
-    gap: 1rem;
+    gap: 2rem;
     padding: 1rem;
+   
 }
 .ST-header{
     grid-area : ST-header;
@@ -20,7 +21,7 @@
 }
 .ST-chart1 {
     grid-area : ST-chart1;
-    background-color : indianred;
+    /* background-color : indianred; */
 }
 .ST-chart2 {
     grid-area : ST-chart2;

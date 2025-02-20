@@ -1,8 +1,10 @@
 from flask import Flask, jsonify
+from flask_cors import CORS  # Import CORS
 import pandas as pd
 import os
 
 app = Flask(__name__)
+CORS(app)  # ✅ Enable CORS for all routes
 
 # Load shipment data safely
 CSV_FILE = "shipmentinfo_data.csv"
@@ -19,7 +21,15 @@ def convert_to_json(df):
 
 @app.route("/")
 def home():
-    return jsonify({"message": "Welcome to the Shipment API", "endpoints": ["/shipments", "/shipments/<year>", "/shipments/country/<country>", "/shipments/type/<shipment_type>"]})
+    return jsonify({
+        "message": "Welcome to the Shipment API",
+        "endpoints": [
+            "/shipments", 
+            "/shipments/<year>", 
+            "/shipments/country/<country>", 
+            "/shipments/type/<shipment_type>"
+        ]
+    })
 
 @app.route("/shipments", methods=["GET"])
 def get_all_shipments():
