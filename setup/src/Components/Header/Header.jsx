@@ -1,3 +1,4 @@
+import SubHeader from '../Subheader/Subheader';
 import './Header.css'
 import { useLocation } from 'react-router-dom'
 function Header ({className}){
@@ -13,12 +14,15 @@ function Header ({className}){
     const pageTitle = mainPages[location.pathname] || "";
     return(
         <header className={className}>
-            <p>Rolling Cargo Shipping Co.</p>
+           <div>
+           <p>Rolling Cargo Shipping Co.</p>
             {pageTitle && <h1>{pageTitle}</h1>}
             <h2>Search bar</h2>
             <p>Settings</p>
             <p>notifications</p>
             <p>profile</p>
+           </div>
+           <SubHeader/>
         </header>
     )
 }

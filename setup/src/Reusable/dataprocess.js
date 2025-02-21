@@ -27,7 +27,6 @@ export function processData(filteredData){
         }
 
     })
-    // console.log("Grouped Data:", monthlyData);
     const result = Object.values(monthlyData).map((monthData) => ({
         month : monthData.monthName,
         Air : monthData.Air.length ? monthData.Air.reduce((acc,b) => acc + b,0) / monthData.Air.length : 0,

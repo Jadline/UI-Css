@@ -1,9 +1,17 @@
 header {
     display : flex;
+    flex-direction: column;
+    gap : 2rem;
+    padding-block : 1rem;
+    
+}
+header div:first-child{
+    display : flex;
     justify-content : space-between;
     /* background-color : red; */
     padding-inline : 2rem;
     align-items : center;
     color :#fff;
     font-size : 1.6rem;
+
 }

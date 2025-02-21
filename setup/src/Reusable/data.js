@@ -4,7 +4,7 @@ export function data(dashboarddata){
         return [];
     }
 
-    console.log("Dashboard Data:", dashboarddata); // Debugging log
+    // console.log("Dashboard Data:", dashboarddata); // Debugging log
 
     const months = [
         "Jan", "Feb", "Mar", "Apr", "May", "Jun", 
@@ -14,8 +14,6 @@ export function data(dashboarddata){
     const monthlydata = {}
 
     dashboarddata.forEach((item) => {
-        // console.log("Processing Item:", item); // Debugging log
-
         const date = new Date(item.Date)
         const monthIndex = date.getMonth()
         const monthName = months[monthIndex]
@@ -41,10 +39,10 @@ export function data(dashboarddata){
         }     
     });
 
-    // console.log("Monthly Data After Processing:", JSON.stringify(monthlydata, null, 2)); // ✅ Log after each item // Debugging log
+    
 
     const result = Object.values(monthlydata).map((monthdata) => ({
-        month: monthdata.monthName,  // ✅ FIXED
+        month: monthdata.monthName,  
         Air: monthdata.Air.length 
             ? monthdata.Air.reduce((acc, b) => acc + b, 0) / monthdata.Air.length 
             : 0,
@@ -64,6 +62,6 @@ export function data(dashboarddata){
 
     result.sort((a, b) => months.indexOf(a.month) - months.indexOf(b.month));
 
-    console.log("Final Processed Data:", result); // Debugging log
+    // console.log("Final Processed Data:", result);
     return result;
 }

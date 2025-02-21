@@ -65,7 +65,7 @@ function Line( { data,className  }){
     });
     
     return (
-      <div className={className} style={{ width: "100%", height: "100%", minHeight: "300px" ,display : 'flex',padding:'1rem' }}>
+      <div className={className} style={{ width: "100%", height: "100%", minHeight: "300px" ,display : 'flex' }}>
           <svg width="100%" height="100%" viewBox={`0 0 ${width} ${height}`} preserveAspectRatio="none"  >
             <rect width={width} height={height} fill="#f4f4f4" rx={10} />
 
